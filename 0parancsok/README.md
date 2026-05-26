@@ -11,54 +11,54 @@
 | bind9           | bind             |
 | isc-dhcp-server | dhcp-server      |
 
-DNF
+DNF<br><br>
 
-dnf search
-dnf info
-dnf history
-dnf provides
+dnf search<br>
+dnf info<br>
+dnf history<br>
+dnf provides<br><br>
 
-Firewalld
+Firewalld<br><br>
 
-firewall-cmd --list-all
-firewall-cmd --add-service=http
-firewall-cmd --reload
+firewall-cmd --list-all<br>
+firewall-cmd --add-service=http<br>
+firewall-cmd --reload<br>
 
-Nmcli
+Nmcli<br><br>
 
-nmcli con show
-nmcli device status
-nmcli con up
+nmcli con show<br>
+nmcli device status<br>
+nmcli con up<br>
 
-Systemd
+Systemd<br><br>
 
-systemctl status
-systemctl restart
-systemctl enable
-systemctl daemon-reload
+systemctl status<br>
+systemctl restart<br>
+systemctl enable<br>
+systemctl daemon-reload<br><br>
 
-Journalctl
+Journalctl<br><br>
 
-journalctl -xe
-journalctl -u httpd
-journalctl -f
+journalctl -xe<br>
+journalctl -u httpd<br>
+journalctl -f<br><br>
 
-SELinux
+SELinux<br><br>
 
-getenforce
-setenforce
-restorecon
-ls -Z
+getenforce<br>
+setenforce<br>
+restorecon<br>
+ls -Z<br><br>
 
-utolsó tíz parancs:
+utolsó tíz parancs:<br><br>
 
-history | tail
+history | tail<br><br>
 
-utolsó parancsot újra:
+utolsó parancsot újra:<br><br>
 
-!!
+!!<br><br>
 
-adott history számú parancsot (pl.: 54) újra:
+adott history számú parancsot (pl.: 54) újra:<br><br>
 
-!54
+!54<br>
 
