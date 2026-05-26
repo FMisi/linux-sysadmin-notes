@@ -4,18 +4,18 @@ ip a
 
 ## statikus IP állítása
 
-sudo nmcli con show
-sudo nmcli con mod "1. vezetékes kapcsolat" ipv4.addresses 192.168.1.10/24
-sudo nmcli con mod "Wired connection 1" ipv4.method manual
-sudo nmcli con mod "Wired connection 1" ipv4.gateway 192.168.1.1
-sudo nmcli con up "Wired connection 1"
-`A kapcsolat sikeresen aktiválva[...]`
+sudo nmcli con show<br>
+sudo nmcli con mod "1. vezetékes kapcsolat" ipv4.addresses 192.168.1.10/24<br>
+sudo nmcli con mod "Wired connection 1" ipv4.method manual<br>
+sudo nmcli con mod "Wired connection 1" ipv4.gateway 192.168.1.1<br>
+sudo nmcli con up "Wired connection 1"<br>
+`A kapcsolat sikeresen aktiválva[...]`<br>
 
 ## DHCP beállítás
 
-Rocky <10:
-sudo dnf install dhcp-server -y
-sudo nano /etc/dhcp/dhcpd.conf
+Rocky <10:<br>
+sudo dnf install dhcp-server -y<br>
+sudo nano /etc/dhcp/dhcpd.conf<br>
 
 csak ez legyen:
 ```bash
@@ -34,23 +34,23 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
 }
 ```
 
-sudo nano /etc/sysconfig/dhcpd
+sudo nano /etc/sysconfig/dhcpd<br>
 ```bash
 DHCPDARGS=enp0s8    
 ```
-(megnézni ip a -val)
+(megnézni ip a -val)<br><br>
 
-sudo systemctl enable --now dhcpd
+sudo systemctl enable --now dhcpd<br><br>
 
-systemctl status dhcpd
+systemctl status dhcpd<br><br>
 
-journalctl -u dhcpd
+journalctl -u dhcpd<br><br>
 
 
-Rocky >=10:
+Rocky >=10:<br><br>
 
-sudo dnf install kea -y
-sudo nano /etc/kea/kea-dhcp4.conf
+sudo dnf install kea -y<br>
+sudo nano /etc/kea/kea-dhcp4.conf<br><br>
 
 {
   "Dhcp4": {
@@ -88,16 +88,16 @@ sudo nano /etc/kea/kea-dhcp4.conf
   }
 }
 
-systemctl enable --now kea-dhcp4
+systemctl enable --now kea-dhcp4<br><br>
 
-systemctl status kea-dhcp4
+systemctl status kea-dhcp4<br><br>
 
-journalctl -u kea-dhcp4
+journalctl -u kea-dhcp4<br><br>
 
 
 ## Debian kliens
 
-sudo apt install isc-dhcp-client -y
-sudo dhclient
-ip a
+sudo apt install isc-dhcp-client -y<br>
+sudo dhclient<br>
+ip a<br>
 
