@@ -353,14 +353,6 @@ Nagyon fontos:
 | connection refused | firewall vagy service |
 
 
-## nagyon alapok:
-
-```text 
-service -> log
-```
-
-😄
-
 Linuxon minden:
 
 * service
