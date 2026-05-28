@@ -382,7 +382,7 @@ containerizálása.
 
 ---
 
-# Interjús fontos témák
+# Fontos témák
 
 * image vs container
 * volume
